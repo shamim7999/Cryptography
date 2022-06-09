@@ -78,7 +78,7 @@ for cc in P:
     id = ord(cc)
     id = bigMod(id, 2, n)
     cl.append(id)
-    C+=chr(id)
+    C+=str(id)
 print(f"Ciphertext is: {C}")
 
 ###### Decryption #####
@@ -109,7 +109,7 @@ for cc in cl:
                 X = int(norm(X+x[k], int(Mod))) 
             #print(r)
             #print(m)
-            print(f"Possible Plain Text is: {chr(X)}")
+            #print(f"Possible Plain Text is: {chr(X)}")
 
             if texts.find(chr(X))!=-1:
                 pl+=chr(X)
@@ -117,4 +117,8 @@ for cc in cl:
             #print()
 
 print(f"Plain Text is: {pl}")
-# Take Any Input
+"""
+    Enter a Plain Text: Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.
+Ciphertext is: 43569409121001060911664940910000102011322510816193610241345612321102413456108161020110241020194091322513456102412321104041024532912100100001102594091024123211210010241345610819604146411024960412321940913456102411025132251024980112321118811188112321121002116102462411210010241345610816102011024132251232113689134561081610201129961210010249801123219409132251345619361024134561081610201102468891368912100100009409129969604940912100132251936102494091210010241020112100123211299611881123211368913225102411881940912100106091299612321139241020110241040412321129961020113225134561024132251081694091299610201100001024141611102513456108161024476194091322513456102011299612100102453291210010000110259409193610241102513225102410816123211188110201102413456123211024134561081610201102412996123211464194091166410244356102011210010609940911664102413456110251060910201129962116
+Plain Text is: Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma Ganges, Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger.
+"""
